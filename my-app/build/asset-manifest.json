@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2105a2ea.css",
+    "main.js": "/static/js/main.8b9aceff.js",
+    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/media/Netflix.png": "/static/media/Netflix.839095234d0085434a5f.png",
+    "static/media/Rahul_Nagaura.pdf": "/static/media/Rahul_Nagaura.32685580caf02e79cc7e.pdf",
+    "static/media/image.jpg": "/static/media/image.900b2d1c81e2dc8d0c85.jpg",
+    "static/media/logo-2.png": "/static/media/logo-2.4e849981263422cd828e.png",
+    "static/media/PortFolio.webp": "/static/media/PortFolio.124c08e7201567fbe394.webp",
+    "index.html": "/index.html",
+    "main.2105a2ea.css.map": "/static/css/main.2105a2ea.css.map",
+    "main.8b9aceff.js.map": "/static/js/main.8b9aceff.js.map",
+    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2105a2ea.css",
+    "static/js/main.8b9aceff.js"
+  ]
+}
