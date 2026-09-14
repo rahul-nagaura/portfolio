@@ -77,7 +77,31 @@ const caseStudies = [
     roleLine: "Product Strategy",
     hook: "Designed a gamified learning portal roadmap using RICE framework, projected to lift course completion by ~30%.",
     tags: ["Product Strategy", "GTM", "Wireframing"],
-    content: null // Placeholder
+    links: [
+      { label: "View Deck (PDF)", url: "https://github.com/rahul-nagaura/Accredian-Interactive-Student-Interface-/raw/main/Accredian%20deck.pdf", icon: ExternalLink },
+      { label: "View on GitHub", url: "https://github.com/rahul-nagaura/Accredian-Interactive-Student-Interface-", icon: ExternalLink }
+    ],
+    images: {
+      thumb: "" // Placeholder for cover image
+    },
+    content: {
+      context: "Accredian is an Indian ed-tech institution (founded 2018) that upskills working professionals in Product Management, Data Science & AI, and General Management. Keeping busy, working professionals engaged through a months-long course is a core retention challenge for any ed-tech product — motivation, not content, is often the bottleneck. This project reimagined the student dashboard as an engagement engine. (Built as a competition entry — placed 3rd.)",
+      problem: "Accredian's students are working professionals juggling courses alongside full-time jobs. The brief: design an interactive student dashboard that uses gamification to drive engagement and keep learners motivated and on-track. The real problem underneath the brief — how do you sustain motivation when the reward (a career outcome) is months away? — meant the design had to create near-term wins, not just track long-term progress.",
+      role: "I owned the product work end to end: user research and persona building, feature ideation and prioritization, high-fidelity design in Figma, the go-to-market approach, and defining the success metrics to measure it against.",
+      process: [
+        "User personas: built detailed personas to ground design decisions in real learner needs and behaviors, rather than designing for a generic \"student.\"",
+        "Feature ideation: designed gamification mechanics — leaderboards, achievement badges, and progress tracking — chosen specifically to create the near-term wins the problem demanded.",
+        "Prioritization: ranked features against user feedback, business goals, and expected engagement impact, so the build order reflected value, not just ease.",
+        "Design: produced high-fidelity wireframes and prototypes in Figma, iterating with the team.",
+        "GTM: outlined a launch-and-adoption strategy — how the new dashboard would actually reach and be taken up by students."
+      ],
+      outcome: [
+        { text: "A complete, prototyped dashboard concept with a prioritized feature set and a defined GTM approach — presented as a full product deck.", image: "", caption: "[Placeholder: Persona Slide]" },
+        { text: "Placed 3rd in the competition, an external validation of the product thinking.", image: "", caption: "[Placeholder: Prioritization Slide]" },
+        { text: "Defined clear success metrics (engagement and satisfaction KPIs) so the dashboard's impact could be measured post-launch, with a projected lift in engagement as the target the design was built to hit.", image: "", caption: "[Placeholder: Dashboard Mockup]" }
+      ],
+      reflection: "This project was where product management \"clicked\" for me. The lesson that stuck: gamification isn't badges for their own sake — it's a tool to solve a specific motivation problem, and it only works if every mechanic maps back to a real user need surfaced in research. Given more time, I'd validate the projected engagement lift with an A/B test on the leaderboard and badge mechanics, since those are the features most likely to move the metric — and the projection is a hypothesis until the data confirms it."
+    }
   }
 ];
 
@@ -414,9 +438,9 @@ export const Projects = () => {
                   <h3 className="text-2xl font-heading font-bold uppercase tracking-tight mb-6 flex items-center gap-4">
                     <span className="text-sm font-mono text-gray-400">06</span> Reflection
                   </h3>
-                  <div className="pl-6 border-l-2 border-black dark:border-white">
-                    <p className="italic font-body text-xl sm:text-2xl leading-snug">
-                      "{activeStudy.content.reflection}"
+                  <div className="pl-6 border-l-2 border-black/20 dark:border-white/20">
+                    <p className="text-base sm:text-lg font-body leading-relaxed">
+                      {activeStudy.content.reflection}
                     </p>
                   </div>
                 </section>
