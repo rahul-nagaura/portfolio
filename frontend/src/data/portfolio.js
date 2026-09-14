@@ -99,7 +99,7 @@ export const portfolioData = {
         { label: "Try the Live Demo", url: "https://bahikhata-ruddy.vercel.app/login" },
         { label: "View on GitHub", url: "https://github.com/rahul-nagaura/bahikhata-" }
       ],
-      content: `<p class="text-xs font-mono text-black/60 dark:text-gray-400 mt-[-1rem] mb-8">Demo login — email: demo@bahikhata.app &middot; password: demo. Or just click 'Login as Demo' on the login page.</p>
+      content: `<p class="text-xs font-mono text-black/60 dark:text-gray-400 mt-[-1rem] mb-8">Demo login — email: demo@bahikhata.app &middot; password: demo.</p>
 
 <p>BahiKhata is a financial tracking web app for individual lenders and small business owners who lend money and collect it back in installments. It replaces error-prone physical ledgers and spreadsheets with an automated system that isolates collection cycles, calculates accumulated unpaid dues, and flags late payments at a glance.</p>
 <br/>

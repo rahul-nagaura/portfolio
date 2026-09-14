@@ -93,11 +93,11 @@ export const ProjectDetail = () => {
               return (
               <ScrollReveal key={idx} delay={0.2 + (idx * 0.1)} direction="up">
                 <div className="w-full group">
-                  <div className="w-full bg-gray-50 dark:bg-white/5 border border-black/10 dark:border-white/10 p-2 overflow-hidden rounded-xl">
+                  <div className="w-full bg-gray-50 dark:bg-white/5 border border-black/10 dark:border-white/10 p-2 overflow-hidden rounded-xl flex justify-center items-center">
                     <img 
                       src={imgUrl} 
                       alt={caption || `${project.title.replace('<br/>', ' ')} screenshot ${idx + 1}`} 
-                      className="w-full h-auto object-cover rounded-lg"
+                      className="max-h-[600px] md:max-h-[700px] w-auto max-w-full object-contain rounded-lg"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
                   </div>
