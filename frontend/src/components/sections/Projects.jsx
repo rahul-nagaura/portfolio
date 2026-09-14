@@ -45,7 +45,31 @@ const caseStudies = [
     roleLine: "Data Analyst",
     hook: "Interactive Power BI dashboard analyzing 100K+ ride records to visualize regional revenue and cancellation trends.",
     tags: ["Data Analytics", "Power BI", "Dashboard"],
-    content: null // Placeholder
+    links: [
+      { label: "View on GitHub", url: "https://github.com/rahul-nagaura/OLA-Ride-Insights", icon: ExternalLink }
+    ],
+    images: {
+      thumb: "/projects/ola/overall.png"
+    },
+    content: {
+      context: "Ride-sharing platforms generate enormous volumes of operational data — bookings, cancellations, payments, ratings — but that data only creates value when it's shaped into something a decision-maker can act on. This project analyzes a large OLA ride dataset and builds an interactive Power BI dashboard so management can move from raw records to clear operational signals.",
+      problem: "OLA's management needed to answer four operational questions from the data, none of which are easy to see in raw rows: How do ride volumes and booking patterns move over time? What's driving cancellations? Where does revenue actually come from, and how do riders prefer to pay? And how do customer and driver ratings compare — where's the service gap? The challenge was to turn a messy Excel export into a tool that answers these at a glance.",
+      role: "I owned this end to end as the analyst and designer: sourcing and cleaning the data, defining the KPIs that mattered, building the dashboard, and — most importantly — interpreting what the numbers meant for the business. Tools: Power BI Desktop, Power Query.",
+      process: [
+        "Data loading & cleaning (Power Query): imported the raw ride data, handled missing and incorrect values, and profiled every column for quality and consistency before touching visuals.",
+        "KPI creation (DAX): built measures for the metrics that drive decisions — average ride distance, total revenue, customer rating, driver rating.",
+        "Dashboard design: built visualizations (bar, pie, scatter, maps) with slicers for dynamic filtering by region, ride type, and date, so a manager can interrogate any segment.",
+        "Segmentation: categorized customers by ride frequency and total value, so high-value riders can be looked at separately from occasional ones."
+      ],
+      outcome: [
+        { text: "Demand is time-patterned — ride volumes spike on weekends and public holidays. → Implication: driver incentives and supply planning should be concentrated on these peaks.", image: "/projects/ola/overall.png", caption: "Overall Ride Volume Analysis" },
+        { text: "Vehicle preference is concentrated — SUVs and Hatchbacks dominate rider choice. → Implication: fleet and driver-onboarding mix should skew toward what riders actually book.", image: "/projects/ola/vehicle-type.png", caption: "Vehicle Type Preferences" },
+        { text: "Payment is cash/UPI-led — COD & UPI is the dominant method, ahead of credit and debit cards. → Implication: UPI reliability and cash-handling flows matter more than card infrastructure for this user base.", image: "/projects/ola/revenue.png", caption: "Revenue & Payment Sources" },
+        { text: "Cancellations are addressable — the top reasons are \"Driver No-Show\" and \"Customer Canceled.\" → Implication: driver-no-show is a supply-accountability problem, not a demand problem — a targeted intervention (penalties, reassignment speed) could directly cut this.", image: "", caption: "Cancellation Trends" },
+        { text: "There's a driver-side service gap — customer ratings run slightly higher than driver ratings. → Implication: a driver-improvement or training program is the higher-leverage place to raise overall satisfaction.", image: "", caption: "Ratings Analysis" }
+      ],
+      reflection: "The build reinforced something central to product work: a dashboard isn't the deliverable — the decision it enables is. The most useful part wasn't the visualizations but connecting each pattern to a lever management could actually pull (supply timing, fleet mix, cancellation policy, driver quality). If I extended this, I'd add cohort retention over time and tie cancellation rates to specific regions and time windows, so the \"where and when\" of the driver-no-show problem becomes precise enough to act on."
+    }
   },
   {
     id: "accredian",
@@ -261,7 +285,7 @@ export const Projects = () => {
                           href={link.url}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 border border-black/20 dark:border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                          className="flex items-center gap-2 px-4 py-2 border border-black/20 dark:border-white/20 text-[10px] font-mono font-bold uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors dark:[text-shadow:none] dark:[filter:none]"
                         >
                           <link.icon size={14} />
                           <span>{link.label}</span>
@@ -339,29 +363,43 @@ export const Projects = () => {
                     <span className="text-sm font-mono text-gray-400">05</span> Outcome
                   </h3>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-                    <div className="border border-black dark:border-white/30 p-6">
-                      <div className="text-3xl font-heading font-bold mb-2">10.9k</div>
-                      <div className="text-[10px] font-mono uppercase tracking-widest opacity-70">Organic followers<br/>₹0 ad spend</div>
+                  {activeStudy.id === 'sme' && (
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+                      <div className="border border-black dark:border-white/30 p-6">
+                        <div className="text-3xl font-heading font-bold mb-2">10.9k</div>
+                        <div className="text-[10px] font-mono uppercase tracking-widest opacity-70">Organic followers<br/>₹0 ad spend</div>
+                      </div>
+                      <div className="border border-black dark:border-white/30 p-6">
+                        <div className="text-3xl font-heading font-bold mb-2">₹90k</div>
+                        <div className="text-[10px] font-mono uppercase tracking-widest opacity-70">Revenue in<br/>3-6 months</div>
+                      </div>
+                      <div className="border border-black dark:border-white/30 p-6">
+                        <div className="text-3xl font-heading font-bold mb-2">96%</div>
+                        <div className="text-[10px] font-mono uppercase tracking-widest opacity-70">Traffic converted<br/>to /bml diagnostic</div>
+                      </div>
                     </div>
-                    <div className="border border-black dark:border-white/30 p-6">
-                      <div className="text-3xl font-heading font-bold mb-2">₹90k</div>
-                      <div className="text-[10px] font-mono uppercase tracking-widest opacity-70">Revenue in<br/>3-6 months</div>
-                    </div>
-                    <div className="border border-black dark:border-white/30 p-6">
-                      <div className="text-3xl font-heading font-bold mb-2">96%</div>
-                      <div className="text-[10px] font-mono uppercase tracking-widest opacity-70">Traffic converted<br/>to /bml diagnostic</div>
-                    </div>
-                  </div>
+                  )}
                   
-                  <ul className="space-y-4 list-none text-base sm:text-lg font-body leading-relaxed">
-                    {activeStudy.content.outcome.map((point, idx) => (
-                      <li key={idx} className="relative pl-6">
-                        <span className="absolute left-0 top-3 w-1.5 h-1.5 bg-black dark:bg-white"></span>
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="space-y-12">
+                    {activeStudy.content.outcome.map((point, idx) => {
+                      const isObj = typeof point === 'object';
+                      const text = isObj ? point.text : point;
+                      return (
+                        <div key={idx} className="space-y-6">
+                          <div className="relative pl-6 text-base sm:text-lg font-body leading-relaxed">
+                            <span className="absolute left-0 top-3 w-1.5 h-1.5 bg-black dark:bg-white"></span>
+                            {text}
+                          </div>
+                          {isObj && point.image && (
+                            <div className="w-full bg-gray-50 dark:bg-white/5 border border-black/10 dark:border-white/10 p-2 sm:p-4 rounded-xl">
+                              <img src={point.image} alt={point.caption} className="w-full h-auto object-cover rounded-lg border border-black/10 dark:border-white/10" onError={(e) => { e.target.style.display = 'none'; }} />
+                              {point.caption && <p className="text-center text-xs font-mono mt-4 text-black/60 dark:text-gray-400 uppercase tracking-widest">{point.caption}</p>}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </section>
 
                 {/* Final Image: Analytics */}
