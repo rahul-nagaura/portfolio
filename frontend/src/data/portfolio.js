@@ -92,7 +92,7 @@ export const portfolioData = {
   moreProjects: [
     {
       id: "india-election-2024",
-      title: "India Election 2024",
+      title: "India Election<br/>2024",
       description: "A 6-page interactive dashboard analyzing India's 2024 General Election — seat distribution, alliance performance, and constituency-level drill-down.",
       tags: ["POWER BI", "DATA VIZ"],
       links: [
@@ -108,11 +108,18 @@ export const portfolioData = {
   <li>State and constituency drill-through</li>
   <li>Export-to-Excel and show-all-data for self-serve exploration</li>
   <li>Dynamic state selector with alliance KPIs</li>
+</ul>
+<br/>
+<p><strong>What the data shows:</strong></p>
+<ul class="list-disc pl-5 mt-2 space-y-1 text-black/60 dark:text-gray-400">
+  <li>[Placeholder for finding 1]</li>
+  <li>[Placeholder for finding 2]</li>
+  <li>[Placeholder for finding 3]</li>
 </ul>`,
       images: [
-        "", // overview dashboard placeholder
-        "", // screenshot 2 placeholder
-        ""  // screenshot 3 placeholder
+        { url: "/projects/india-election/overview.png", caption: "Overview Analysis Dashboard" },
+        { url: "/projects/india-election/state-demographics.png", caption: "State Demographics Map View" },
+        { url: "/projects/india-election/constituency.png", caption: "Constituency Drill-Down Analysis" }
       ]
     },
     {

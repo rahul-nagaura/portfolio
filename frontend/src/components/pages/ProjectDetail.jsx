@@ -85,19 +85,29 @@ export const ProjectDetail = () => {
 
         {/* Images */}
         {project.images && project.images.length > 0 && (
-          <div className="flex flex-col gap-8 py-8">
-            {project.images.slice(0, 3).map((imgUrl, idx) => (
+          <div className="flex flex-col gap-12 py-8">
+            {project.images.slice(0, 3).map((img, idx) => {
+              const imgUrl = typeof img === 'string' ? img : img.url;
+              const caption = typeof img === 'string' ? null : img.caption;
+              return (
               <ScrollReveal key={idx} delay={0.2 + (idx * 0.1)} direction="up">
-                <div className="w-full bg-gray-50 dark:bg-white/5 border border-black/10 dark:border-white/10 p-2 overflow-hidden rounded-xl">
-                  <img 
-                    src={imgUrl} 
-                    alt={`${project.title} screenshot ${idx + 1}`} 
-                    className="w-full h-auto object-cover rounded-lg"
-                    onError={(e) => { e.target.style.display = 'none'; }}
-                  />
+                <div className="w-full group">
+                  <div className="w-full bg-gray-50 dark:bg-white/5 border border-black/10 dark:border-white/10 p-2 overflow-hidden rounded-xl">
+                    <img 
+                      src={imgUrl} 
+                      alt={caption || `${project.title.replace('<br/>', ' ')} screenshot ${idx + 1}`} 
+                      className="w-full h-auto object-cover rounded-lg"
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                  </div>
+                  {caption && (
+                    <p className="mt-4 text-center text-sm font-mono tracking-wide text-black/60 dark:text-gray-400">
+                      {caption}
+                    </p>
+                  )}
                 </div>
               </ScrollReveal>
-            ))}
+            )})}
           </div>
         )}
 
