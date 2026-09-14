@@ -132,10 +132,10 @@ export const portfolioData = {
 
 <p class="text-sm text-black/60 dark:text-gray-400 italic">Functional MVP, built mid-2026. Live on Vercel — try the one-click demo.</p>`,
       images: [
-        { url: "/projects/bahikhata/flow.png", caption: "Collection Flow — instantly identifies due/paid statuses split by 1st vs. 15th cycles." },
-        { url: "/projects/bahikhata/home.png", caption: "Dashboard — automated tracker for overall collection progress and accumulated overdue amounts." },
-        { url: "/projects/bahikhata/borrowers.png", caption: "Borrower Management — search and filter across active/closed loan states." },
-        { url: "/projects/bahikhata/history.png", caption: "Audit History — chronological ledger of all loan disbursements and EMI repayments." }
+        { url: "/projects/bahikhata/flow.png", caption: "Collection Flow — instantly identifies due/paid statuses split by 1st vs. 15th cycles.", layout: 'portrait' },
+        { url: "/projects/bahikhata/home.png", caption: "Dashboard — automated tracker for overall collection progress and accumulated overdue amounts.", layout: 'portrait' },
+        { url: "/projects/bahikhata/borrowers.png", caption: "Borrower Management — search and filter across active/closed loan states.", layout: 'portrait' },
+        { url: "/projects/bahikhata/history.png", caption: "Audit History — chronological ledger of all loan disbursements and EMI repayments.", layout: 'portrait' }
       ]
     },
     {

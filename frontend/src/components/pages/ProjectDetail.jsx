@@ -90,14 +90,16 @@ export const ProjectDetail = () => {
             {project.images.map((img, idx) => {
               const imgUrl = typeof img === 'string' ? img : img.url;
               const caption = typeof img === 'string' ? null : img.caption;
+              const isPortrait = typeof img !== 'string' && img.layout === 'portrait';
+              
               return (
               <ScrollReveal key={idx} delay={0.2 + (idx * 0.1)} direction="up">
-                <div className="w-full group">
+                <div className={`w-full group ${isPortrait ? 'max-w-sm mx-auto' : ''}`}>
                   <div className="w-full bg-gray-50 dark:bg-white/5 border border-black/10 dark:border-white/10 p-2 overflow-hidden rounded-xl flex justify-center items-center">
                     <img 
                       src={imgUrl} 
                       alt={caption || `${project.title.replace('<br/>', ' ')} screenshot ${idx + 1}`} 
-                      className="max-h-[600px] md:max-h-[700px] w-auto max-w-full object-contain rounded-lg"
+                      className={`h-auto max-w-full object-contain rounded-lg ${isPortrait ? '' : 'w-full'}`}
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
                   </div>
