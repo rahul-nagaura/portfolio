@@ -91,6 +91,54 @@ export const portfolioData = {
   ],
   moreProjects: [
     {
+      id: "bahikhata",
+      title: "BahiKhata",
+      description: "Smart loan and collection tracking for individual lenders — replacing the notebook with an automated dues engine.",
+      tags: ["WEB APP", "PRODUCT & DESIGN", "NEXT.JS", "REACT", "SUPABASE", "TAILWIND", "ROLE: PRODUCT, UX & DATA"],
+      links: [
+        { label: "Try the Live Demo", url: "https://bahikhata-ruddy.vercel.app/login" },
+        { label: "View on GitHub", url: "https://github.com/rahul-nagaura/bahikhata-" }
+      ],
+      content: `<p class="text-xs font-mono text-black/60 dark:text-gray-400 mt-[-1rem] mb-8">Demo login — email: demo@bahikhata.app &middot; password: demo. Or just click 'Login as Demo' on the login page.</p>
+
+<p>BahiKhata is a financial tracking web app for individual lenders and small business owners who lend money and collect it back in installments. It replaces error-prone physical ledgers and spreadsheets with an automated system that isolates collection cycles, calculates accumulated unpaid dues, and flags late payments at a glance.</p>
+<br/>
+
+<p><strong>The problem:</strong></p>
+<p>Individual lenders track loans in notebooks or Excel, where it's hard to separate collection cycles (the 1st vs. the 15th of the month), tally how much a borrower actually owes across missed months, or spot late payers without manual checking. BahiKhata automates all three.</p>
+<br/>
+
+<p><strong>Built with:</strong></p>
+<p>Next.js 16 (App Router), React 19, Tailwind CSS v4, Supabase (PostgreSQL) with Supabase Auth, Dexie.js (IndexedDB) for offline caching, Recharts for visualization, jsPDF & XLSX for exports.</p>
+<br/>
+
+<p><strong>What Rahul owned (as PM & designer):</strong></p>
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li>Defined the core business logic — strict FIFO repayment (payments always clear the oldest debt first) and cycle isolation between the 1st- and 15th-of-month collection windows.</li>
+  <li>Designed the month-centric collection flow and the accumulated-dues display.</li>
+  <li>Managed the database schema and test-data setup in Supabase.</li>
+</ul>
+<br/>
+
+<p><strong>Key features:</strong></p>
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li><strong>Month-centric collections</strong> — see exactly who's due and who's paid this cycle, cleanly split by the 1st vs. 15th.</li>
+  <li><strong>Accumulated dues engine</strong> — auto-sums all unpaid installments to date, not just a single EMI, so nothing slips through.</li>
+  <li><strong>Strict FIFO logic</strong> — every payment covers the oldest outstanding installment first, closing accounting loopholes.</li>
+  <li><strong>Late-payment indicators</strong> — "Paid Late" badges compare actual vs. scheduled payment dates.</li>
+  <li><strong>Offline-resilient sync</strong> — local caching keeps the app stable through network drops, syncing to Supabase on reconnect.</li>
+</ul>
+<br/>
+
+<p class="text-sm text-black/60 dark:text-gray-400 italic">Functional MVP, built mid-2026. Live on Vercel — try the one-click demo.</p>`,
+      images: [
+        { url: "/projects/bahikhata/flow.png", caption: "Collection Flow — instantly identifies due/paid statuses split by 1st vs. 15th cycles." },
+        { url: "/projects/bahikhata/home.png", caption: "Dashboard — automated tracker for overall collection progress and accumulated overdue amounts." },
+        { url: "/projects/bahikhata/borrowers.png", caption: "Borrower Management — search and filter across active/closed loan states." },
+        { url: "/projects/bahikhata/history.png", caption: "Audit History — chronological ledger of all loan disbursements and EMI repayments." }
+      ]
+    },
+    {
       id: "india-election-2024",
       title: "India Election<br/>2024",
       description: "A 6-page interactive dashboard analyzing India's 2024 General Election — seat distribution, alliance performance, and constituency-level drill-down.",
@@ -112,12 +160,12 @@ export const portfolioData = {
 <br/>
 <p><strong>What the data shows:</strong></p>
 <ul class="list-disc pl-5 mt-2 space-y-1 text-black/60 dark:text-gray-400">
-  <li>[Placeholder for finding 1]</li>
-  <li>[Placeholder for finding 2]</li>
-  <li>[Placeholder for finding 3]</li>
+  <li>NDA secured a majority with 292 of 543 seats, clearing the 272 halfway mark, while the I.N.D.I.A. bloc formed a substantial opposition with 234.</li>
+  <li>The contest was tighter than the seat gap suggests — a 58-seat margin between the two alliances.</li>
+  <li>17 seats went to unaligned parties and independents, holding the balance outside the two major blocs.</li>
 </ul>`,
       images: [
-        { url: "/projects/india-election/overview.png", caption: "Overview Analysis Dashboard" },
+        { url: "/projects/india-election/overview.png", caption: "Overview dashboard — national seat distribution across NDA, I.N.D.I.A., and others." },
         { url: "/projects/india-election/state-demographics.png", caption: "State Demographics Map View" },
         { url: "/projects/india-election/constituency.png", caption: "Constituency Drill-Down Analysis" }
       ]

@@ -37,9 +37,10 @@ export const ProjectDetail = () => {
             <ArrowLeft size={16} /> Back to Projects
           </Link>
           
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tighter uppercase leading-[1.1] mb-6 [text-shadow:none]">
-            {project.title}
-          </h1>
+          <h1 
+            className="text-4xl sm:text-6xl md:text-7xl font-heading font-extrabold tracking-tighter uppercase leading-[1.1] mb-6 [text-shadow:none]"
+            dangerouslySetInnerHTML={{ __html: project.title }}
+          />
           
           <p className="text-lg sm:text-xl font-body text-black/70 dark:text-gray-300 leading-relaxed max-w-2xl mb-8">
             {project.description}
@@ -86,7 +87,7 @@ export const ProjectDetail = () => {
         {/* Images */}
         {project.images && project.images.length > 0 && (
           <div className="flex flex-col gap-12 py-8">
-            {project.images.slice(0, 3).map((img, idx) => {
+            {project.images.map((img, idx) => {
               const imgUrl = typeof img === 'string' ? img : img.url;
               const caption = typeof img === 'string' ? null : img.caption;
               return (

@@ -54,8 +54,8 @@ export const MoreProjects = () => {
                   to={`/projects/${project.id}`}
                   className="group block border border-black/10 dark:border-white/10 hover:border-black dark:hover:border-white transition-all duration-300 cursor-pointer h-full bg-white dark:bg-[#0A0A0F] text-black dark:text-white p-6 sm:p-8 hover:bg-black/5 dark:hover:bg-white/5"
                 >
-                  <h3 className="text-xl sm:text-2xl font-heading font-bold mb-3 tracking-tight uppercase">
-                    {project.title}
+                  <h3 className="text-xl sm:text-2xl font-mono font-bold mb-3 tracking-tight uppercase">
+                    <span dangerouslySetInnerHTML={{ __html: project.title }} />
                   </h3>
                   <p className="text-sm font-body mb-6 text-black/70 dark:text-gray-400 leading-relaxed line-clamp-2">
                     {project.description}
