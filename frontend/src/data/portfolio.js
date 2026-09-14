@@ -170,44 +170,6 @@ export const portfolioData = {
         { url: "/projects/india-election/constituency.png", caption: "Constituency Drill-Down Analysis" }
       ]
     },
-    {
-      id: "project-beta",
-      title: "Project Beta",
-      description: "Another placeholder project for testing the grid layout and routing.",
-      tags: ["Python", "Data", "Pandas"],
-      links: [
-        { label: "PDF Deck", url: "#" }
-      ],
-      content: "Detailed insights into Project Beta and how the data was aggregated and analyzed to provide meaningful metrics.",
-      images: []
-    },
-    {
-      id: "project-gamma",
-      title: "Project Gamma",
-      description: "Testing the third card in the mobile row.",
-      tags: ["Design", "Figma"],
-      links: [],
-      content: "Design teardown for Project Gamma.",
-      images: []
-    },
-    {
-      id: "project-delta",
-      title: "Project Delta",
-      description: "This should be hidden on mobile by default.",
-      tags: ["Frontend"],
-      links: [],
-      content: "Frontend architecture details.",
-      images: []
-    },
-    {
-      id: "project-epsilon",
-      title: "Project Epsilon",
-      description: "Testing desktop overflow.",
-      tags: ["Backend", "API"],
-      links: [],
-      content: "Backend API design.",
-      images: []
-    }
   ],
   skills: {
     technical: ["SQL", "Python", "HTML", "C++", "Power BI", "Adobe Analytics", "Mixpanel", "Figma", "Apollo.io", "Excel/Sheets"],
