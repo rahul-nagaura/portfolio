@@ -91,18 +91,28 @@ export const portfolioData = {
   ],
   moreProjects: [
     {
-      id: "project-alpha",
-      title: "Project Alpha",
-      description: "A placeholder project description highlighting the core value proposition.",
-      tags: ["React", "Tailwind", "Vite"],
+      id: "india-election-2024",
+      title: "India Election 2024",
+      description: "A 6-page interactive dashboard analyzing India's 2024 General Election — seat distribution, alliance performance, and constituency-level drill-down.",
+      tags: ["POWER BI", "DATA VIZ"],
       links: [
-        { label: "Live Demo", url: "#" },
-        { label: "GitHub", url: "#" }
+        { label: "View on GitHub", url: "https://github.com/rahul-nagaura/india-general-election-results-2024" }
       ],
-      content: "This is a detailed write-up about Project Alpha. It outlines the problem, the solution, and the technical architecture used to build the final product.",
+      content: `<p>An interactive 6-page Power BI dashboard analyzing the 2024 Indian General Election. It covers national seat distribution, NDA vs I.N.D.I.A. alliance performance, state-wise breakdowns, and constituency-level drill-down — built to turn a large public dataset into a tool anyone can explore self-serve.</p>
+<br/>
+<p><strong>Built with:</strong> Power BI, Power Query (data cleaning & transformation), DAX (measures & calculated fields), Excel/CSV as the data source.</p>
+<br/>
+<p><strong>Highlights:</strong></p>
+<ul class="list-disc pl-5 mt-2 space-y-1">
+  <li>6 linked dashboards with a landing-page navigation hub</li>
+  <li>State and constituency drill-through</li>
+  <li>Export-to-Excel and show-all-data for self-serve exploration</li>
+  <li>Dynamic state selector with alliance KPIs</li>
+</ul>`,
       images: [
-        "/profile.jpg", // placeholder
-        "/profile.jpg"
+        "", // overview dashboard placeholder
+        "", // screenshot 2 placeholder
+        ""  // screenshot 3 placeholder
       ]
     },
     {

@@ -91,7 +91,7 @@ export const MoreProjects = () => {
             }`}>
               <button 
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="px-8 py-3 border border-black dark:border-white text-xs font-mono font-bold uppercase tracking-widest text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300 flex items-center gap-2"
+                className="px-8 py-3 border border-black dark:border-white text-xs font-mono font-bold uppercase tracking-widest text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-300 flex items-center gap-2 dark:[text-shadow:none] dark:[filter:none]"
               >
                 {isExpanded ? 'Show Less' : 'See More'}
               </button>

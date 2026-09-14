@@ -65,7 +65,7 @@ export const ProjectDetail = () => {
                 <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3">Links</p>
                 <div className="flex flex-wrap gap-4">
                   {project.links.map(link => (
-                    <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest hover:opacity-60 transition-opacity">
+                    <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest hover:opacity-60 transition-opacity dark:[text-shadow:none] dark:[filter:none]">
                       {link.label} <ExternalLink size={14} />
                     </a>
                   ))}
@@ -77,9 +77,10 @@ export const ProjectDetail = () => {
 
         {/* Content Write-up */}
         <ScrollReveal delay={0.2}>
-          <div className="py-12 prose prose-lg dark:prose-invert max-w-none font-body text-black/80 dark:text-gray-300 leading-relaxed">
-            {project.content}
-          </div>
+          <div 
+            className="py-12 prose prose-lg dark:prose-invert max-w-none font-body text-black/80 dark:text-gray-300 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: project.content }}
+          />
         </ScrollReveal>
 
         {/* Images */}
@@ -99,6 +100,14 @@ export const ProjectDetail = () => {
             ))}
           </div>
         )}
+
+        <ScrollReveal delay={0.3} direction="up">
+          <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 text-center">
+            <Link to="/#projects" className="inline-flex items-center gap-3 text-xs font-mono font-bold uppercase tracking-widest hover:opacity-60 transition-opacity">
+              <ArrowLeft size={16} /> Back to Projects
+            </Link>
+          </div>
+        </ScrollReveal>
 
       </div>
     </div>
