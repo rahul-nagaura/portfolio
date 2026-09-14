@@ -82,7 +82,7 @@ const caseStudies = [
       { label: "View on GitHub", url: "https://github.com/rahul-nagaura/Accredian-Interactive-Student-Interface-", icon: ExternalLink }
     ],
     images: {
-      thumb: "" // Placeholder for cover image
+      thumb: "/projects/accredian/cover.png"
     },
     content: {
       context: "Accredian is an Indian ed-tech institution (founded 2018) that upskills working professionals in Product Management, Data Science & AI, and General Management. Keeping busy, working professionals engaged through a months-long course is a core retention challenge for any ed-tech product — motivation, not content, is often the bottleneck. This project reimagined the student dashboard as an engagement engine. (Built as a competition entry — placed 3rd.)",

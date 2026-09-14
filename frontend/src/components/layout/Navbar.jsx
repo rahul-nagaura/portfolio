@@ -85,9 +85,9 @@ export const Navbar = () => {
       >
         {/* Left: Logo */}
         <div className="flex items-center shrink-0 relative z-10">
-          <a href="#" className="text-xl font-heading font-extrabold tracking-tight text-black dark:text-white transition-colors duration-300">
+          <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-xl font-heading font-extrabold tracking-tight text-black dark:text-white transition-colors duration-300">
             Rahul Nagaura
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
