@@ -21,7 +21,7 @@ export const Contact = () => {
             <ScrollReveal direction="up" delay={0.2} className="hidden md:block w-[40%] shrink-0 max-h-[300px] lg:max-h-[400px]">
               <div className="w-full h-full aspect-square md:aspect-[4/5] bg-gray-100 dark:bg-white/5 overflow-hidden transition-colors duration-500">
                 <img 
-                  src="/profile.jpg" 
+                  src="/profile.png" 
                   alt="Rahul Nagaura" 
                   className="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0 hover:scale-105"
                   onError={(e) => { e.target.style.display = 'none'; }}
