@@ -11,19 +11,19 @@ export const Contact = () => {
         <div className="flex-grow flex flex-col justify-center">
           {/* Top Section: Headline & Photo */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-stretch gap-6 sm:gap-12 mb-8 sm:mb-16">
-            <ScrollReveal direction="up" delay={0.1} className="w-full md:w-[60%] flex flex-col justify-center">
+            <ScrollReveal direction="up" delay={0.1} className="w-full md:flex-1 flex flex-col justify-center">
               <h2 className="text-[11vw] sm:text-6xl md:text-[80px] lg:text-[100px] font-heading font-extrabold tracking-tight uppercase leading-[1.1] md:leading-[1] mb-0 break-words dark:[text-shadow:none]">
                 LET'S<span className="hidden md:inline"><br /></span><span className="md:hidden"> </span>TALK.
               </h2>
             </ScrollReveal>
 
             {/* Profile Photo - Hidden on mobile, visible on md and up */}
-            <ScrollReveal direction="up" delay={0.2} className="hidden md:block w-[40%] shrink-0 max-h-[300px] lg:max-h-[400px]">
-              <div className="w-full h-full aspect-square md:aspect-[4/5] bg-gray-100 dark:bg-white/5 overflow-hidden transition-colors duration-500">
+            <ScrollReveal direction="up" delay={0.2} className="hidden md:block shrink-0 w-[200px] lg:w-[260px]">
+              <div className="w-full h-full aspect-square md:aspect-[4/5] bg-gray-100 dark:bg-white/5 overflow-hidden transition-colors duration-500 rounded-sm">
                 <img 
                   src="/profile.png" 
                   alt="Rahul Nagaura" 
-                  className="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0 hover:scale-105"
+                  className="w-full h-full object-cover"
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />
               </div>
