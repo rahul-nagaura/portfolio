@@ -33,43 +33,39 @@ export const Hero = () => {
               </p>
             </ScrollReveal>
             
-              <ScrollReveal delay={0.4} direction="up" className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4 mb-12">
-                <a href="#projects" className="px-8 py-3.5 sm:py-4 bg-black text-white dark:bg-white dark:text-black border border-black dark:border-white hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors font-mono font-bold tracking-widest text-xs uppercase w-full sm:w-auto text-center [text-shadow:none] [filter:none]">
-                  View My Work
-                </a>
-                <a href="#contact" className="px-8 py-3.5 sm:py-4 bg-white text-black dark:bg-[#0A0A0F] dark:text-white border border-black dark:border-white hover:bg-gray-50 dark:hover:bg-white/10 transition-colors font-mono font-bold tracking-widest text-xs uppercase w-full sm:w-auto text-center [text-shadow:none] [filter:none]">
-                  Get in Touch
-                </a>
-              </ScrollReveal>
+            <ScrollReveal delay={0.4} direction="up" className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
+              <a href="#projects" className="px-8 py-3.5 sm:py-4 bg-black text-white dark:bg-white dark:text-black border border-black dark:border-white hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors font-mono font-bold tracking-widest text-xs uppercase w-full sm:w-auto text-center [text-shadow:none] [filter:none]">
+                View My Work
+              </a>
+              <a href="#contact" className="px-8 py-3.5 sm:py-4 bg-white text-black dark:bg-[#0A0A0F] dark:text-white border border-black dark:border-white hover:bg-gray-50 dark:hover:bg-white/10 transition-colors font-mono font-bold tracking-widest text-xs uppercase w-full sm:w-auto text-center [text-shadow:none] [filter:none]">
+                Get in Touch
+              </a>
+            </ScrollReveal>
+          </div>
 
-              {/* Stats Row */}
-              <ScrollReveal delay={0.5} direction="up" className="flex flex-row items-start justify-center lg:justify-start gap-6 sm:gap-12 w-full pt-6 border-t border-black/10 dark:border-white/10">
-                <div className="text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl font-heading font-bold text-black dark:text-white tracking-tighter">10K</div>
-                  <div className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-gray-500">organic followers</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl font-heading font-bold text-black dark:text-white tracking-tighter">100K+</div>
-                  <div className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-gray-500">records analyzed</div>
-                </div>
-                <div className="text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl font-heading font-bold text-black dark:text-white tracking-tighter">5-stage</div>
-                  <div className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-widest text-gray-500">B2B funnel built</div>
-                </div>
-              </ScrollReveal>
-            </div>
+          {/* Right Column (Stats) */}
+          <div className="w-full lg:w-[40%] flex flex-row lg:flex-col justify-between lg:justify-center gap-4 sm:gap-8 lg:gap-16 pt-8 lg:pt-0 lg:pl-16">
+            <ScrollReveal delay={0.3} direction="left" className="text-center lg:text-left flex-1">
+              <div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-black dark:text-white mb-1 sm:mb-2 tracking-tighter transition-colors duration-500">10K</div>
+                <div className="text-[9px] sm:text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 transition-colors duration-500">organic followers<br className="hidden lg:block"/> zero ad spend</div>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={0.4} direction="left" className="text-center lg:text-left flex-1">
+              <div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-black dark:text-white mb-1 sm:mb-2 tracking-tighter transition-colors duration-500">100K+</div>
+                <div className="text-[9px] sm:text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 transition-colors duration-500">ride records<br className="hidden lg:block"/> analyzed</div>
+              </div>
+            </ScrollReveal>
 
-            {/* Right Column (Profile Image) */}
-            <div className="w-full lg:w-[45%] flex justify-center lg:justify-end pt-8 lg:pt-0">
-              <ScrollReveal delay={0.3} direction="left" className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-full">
-                <div className="relative aspect-square w-full">
-                  {/* Decorative Background */}
-                  <div className="absolute inset-0 bg-gray-100 dark:bg-white/5 border border-black/10 dark:border-white/10 translate-x-4 translate-y-4"></div>
-                  {/* Image */}
-                  <img src="/profile.png" alt="Rahul Nagaura" className="absolute inset-0 w-full h-full object-cover border border-black dark:border-white/30 grayscale hover:grayscale-0 transition-all duration-700" />
-                </div>
-              </ScrollReveal>
-            </div>
+            <ScrollReveal delay={0.5} direction="left" className="text-center lg:text-left flex-1">
+              <div>
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-black dark:text-white mb-1 sm:mb-2 tracking-tighter transition-colors duration-500">5-stage</div>
+                <div className="text-[9px] sm:text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 transition-colors duration-500">B2B funnel built<br className="hidden lg:block"/> end-to-end</div>
+              </div>
+            </ScrollReveal>
+          </div>
           
         </div>
       </div>
